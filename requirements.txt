@@ -1,0 +1,7 @@
+Django==6.1.2
+djangorestframework==3.18.3
+numpy==2.4.4
+scipy==1.17.1
+requests==2.33.1
+zipcodes==3.0.0
+gunicorn==26.2.0

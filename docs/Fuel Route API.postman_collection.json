@@ -1,0 +1,242 @@
+{
+  "info": {
+    "_postman_id": "4ac9fd39-3675-456c-b7a9-878c975e9371",
+    "name": "Fuel Route API",
+    "schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+    "_exporter_id": "59167940",
+    "_collection_link": "https://go.postman.co/collection/59167940-4ac9fd39-3675-456c-b7a9-878c975e9371?source=collection_link"
+  },
+  "item": [
+    {
+      "name": "01 Chicago to Dallas - 200",
+      "request": {
+        "method": "POST",
+        "header": [],
+        "body": {
+          "mode": "raw",
+          "raw": "   {\"start\": \"Chicago, IL\", \"finish\": \"Dallas, TX\"}",
+          "options": {
+            "raw": {
+              "language": "json"
+            }
+          }
+        },
+        "url": {
+          "raw": "http://127.0.0.1:8000/api/route/",
+          "protocol": "http",
+          "host": [
+            "127",
+            "0",
+            "0",
+            "1"
+          ],
+          "port": "8000",
+          "path": [
+            "api",
+            "route",
+            ""
+          ]
+        }
+      },
+      "response": []
+    },
+    {
+      "name": "02 Short trip no stops - 200",
+      "request": {
+        "method": "POST",
+        "header": [],
+        "body": {
+          "mode": "raw",
+          "raw": "{\"start\": \"Dallas, TX\", \"finish\": \"Fort Worth, TX\"}",
+          "options": {
+            "raw": {
+              "language": "json"
+            }
+          }
+        },
+        "url": {
+          "raw": "http://127.0.0.1:8000/api/route/",
+          "protocol": "http",
+          "host": [
+            "127",
+            "0",
+            "0",
+            "1"
+          ],
+          "port": "8000",
+          "path": [
+            "api",
+            "route",
+            ""
+          ]
+        }
+      },
+      "response": []
+    },
+    {
+      "name": "03 Invalid location - 400",
+      "request": {
+        "method": "POST",
+        "header": [],
+        "body": {
+          "mode": "raw",
+          "raw": "{\"start\": \"Paris\", \"finish\": \"New York, NY\"}",
+          "options": {
+            "raw": {
+              "language": "json"
+            }
+          }
+        },
+        "url": {
+          "raw": "http://127.0.0.1:8000/api/route/",
+          "protocol": "http",
+          "host": [
+            "127",
+            "0",
+            "0",
+            "1"
+          ],
+          "port": "8000",
+          "path": [
+            "api",
+            "route",
+            ""
+          ]
+        }
+      },
+      "response": []
+    },
+    {
+      "name": "04 Same start and finish - 400",
+      "request": {
+        "method": "POST",
+        "header": [],
+        "body": {
+          "mode": "raw",
+          "raw": "{\"start\": \"Dallas, TX\", \"finish\": \"Dallas, TX\"}",
+          "options": {
+            "raw": {
+              "language": "json"
+            }
+          }
+        },
+        "url": {
+          "raw": "http://127.0.0.1:8000/api/route/",
+          "protocol": "http",
+          "host": [
+            "127",
+            "0",
+            "0",
+            "1"
+          ],
+          "port": "8000",
+          "path": [
+            "api",
+            "route",
+            ""
+          ]
+        }
+      },
+      "response": []
+    },
+    {
+      "name": "05 Missing finish - 400",
+      "request": {
+        "method": "POST",
+        "header": [],
+        "body": {
+          "mode": "raw",
+          "raw": "{\"start\": \"Los Angeles, CA\"}",
+          "options": {
+            "raw": {
+              "language": "json"
+            }
+          }
+        },
+        "url": {
+          "raw": "http://127.0.0.1:8000/api/route/",
+          "protocol": "http",
+          "host": [
+            "127",
+            "0",
+            "0",
+            "1"
+          ],
+          "port": "8000",
+          "path": [
+            "api",
+            "route",
+            ""
+          ]
+        }
+      },
+      "response": []
+    },
+    {
+      "name": "06 Coordinates to Brooklyn - 200",
+      "request": {
+        "method": "POST",
+        "header": [],
+        "body": {
+          "mode": "raw",
+          "raw": "{\"start\": \"34.05,-118.24\", \"finish\": \"Brooklyn, NY\"}",
+          "options": {
+            "raw": {
+              "language": "json"
+            }
+          }
+        },
+        "url": {
+          "raw": "http://127.0.0.1:8000/api/route/",
+          "protocol": "http",
+          "host": [
+            "127",
+            "0",
+            "0",
+            "1"
+          ],
+          "port": "8000",
+          "path": [
+            "api",
+            "route",
+            ""
+          ]
+        }
+      },
+      "response": []
+    },
+    {
+      "name": "07 Los Angeles to New York - 200",
+      "request": {
+        "method": "POST",
+        "header": [],
+        "body": {
+          "mode": "raw",
+          "raw": "{\"start\": \"Los Angeles, CA\", \"finish\": \"New York, NY\"}",
+          "options": {
+            "raw": {
+              "language": "json"
+            }
+          }
+        },
+        "url": {
+          "raw": "http://127.0.0.1:8000/api/route/",
+          "protocol": "http",
+          "host": [
+            "127",
+            "0",
+            "0",
+            "1"
+          ],
+          "port": "8000",
+          "path": [
+            "api",
+            "route",
+            ""
+          ]
+        }
+      },
+      "response": []
+    }
+  ]
+}

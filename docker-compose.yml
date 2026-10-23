@@ -1,0 +1,18 @@
+services:
+  web:
+    build: .
+    image: fuel-route-planner:latest
+    ports:
+      - "${PORT:-8000}:8000"
+    environment:
+      DJANGO_DEBUG: "0"
+      DJANGO_SECRET_KEY: "${DJANGO_SECRET_KEY:-docker-dev-secret-change-me}"
+      DJANGO_ALLOWED_HOSTS: "${DJANGO_ALLOWED_HOSTS:-*}"
+      OSRM_BASE_URL: "${OSRM_BASE_URL:-https://router.project-osrm.org}"
+      WEB_CONCURRENCY: "${WEB_CONCURRENCY:-2}"
+    volumes:
+      - fuel_data:/data
+    restart: unless-stopped
+
+volumes:
+  fuel_data:
