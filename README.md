@@ -15,6 +15,8 @@
 Give it a start and a finish. It returns the driving route, the fuel stops that minimise total cost for a
 500-mile-range vehicle at 10 MPG, and the total money spent on fuel. It also ships an interactive Leaflet map.
 
+![Route map](docs/map-screenshot.png)
+
 ---
 
 ## Table of contents
